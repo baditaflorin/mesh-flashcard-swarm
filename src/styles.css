@@ -1,0 +1,260 @@
+/* App-local styles. Mesh chrome (settings drawer, self-ref bar) is provided by
+ * @baditaflorin/mesh-common/styles.css imported in main.tsx. */
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--mesh-bg);
+  color: var(--mesh-fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.swarm {
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 5.75rem 1.25rem 2.5rem;
+  color: #f5f3ff;
+}
+.swarm__hero {
+  max-width: 48rem;
+  margin-bottom: 1.5rem;
+}
+.eyebrow {
+  color: #c4b5fd;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  margin: 0 0 0.45rem;
+  text-transform: uppercase;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1 {
+  font-size: clamp(2.3rem, 7vw, 4.7rem);
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+  margin-bottom: 0.9rem;
+}
+h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+.lede {
+  color: #ddd6fe;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.review,
+.composer,
+.deck,
+.identity {
+  background: linear-gradient(145deg, #261341, #171026);
+  border: 1px solid #4c3374;
+  border-radius: 1.25rem;
+  box-shadow: 0 1.2rem 3.6rem #08031255;
+}
+.review {
+  padding: 1.15rem;
+  margin-bottom: 1rem;
+}
+.review__bar {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+.review__bar h2 {
+  margin-bottom: 0;
+}
+button {
+  background: #a78bfa;
+  border: 0;
+  border-radius: 0.7rem;
+  color: #160b2a;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  padding: 0.72rem 1rem;
+}
+button:hover:not(:disabled) {
+  background: #c4b5fd;
+}
+button:focus-visible,
+textarea:focus-visible,
+input:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 3px;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.review__status {
+  color: #ddd6fe;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+.review-card {
+  background: #10091d;
+  border: 1px solid #56367f;
+  border-radius: 0.95rem;
+  min-height: 13rem;
+  padding: 1.25rem;
+}
+.review-card--revealed {
+  border-color: #a78bfa;
+}
+.review-card--empty {
+  align-items: center;
+  color: #ddd6fe;
+  display: flex;
+  line-height: 1.5;
+}
+.review-card__label {
+  color: #c4b5fd;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.review-card h3 {
+  font-size: clamp(1.5rem, 4vw, 2.4rem);
+  line-height: 1.12;
+  margin-bottom: 1.6rem;
+}
+.review-card__answer {
+  color: #fde68a;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.review-card__hint,
+.review-card__author,
+.form-note {
+  color: #c4b5fd;
+  line-height: 1.5;
+}
+.review-card__author {
+  font-size: 0.85rem;
+  margin: 1.35rem 0 0;
+}
+.swarm__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+.composer,
+.deck {
+  padding: 1.15rem;
+}
+form {
+  display: grid;
+  gap: 0.85rem;
+}
+label {
+  color: #ede9fe;
+  display: grid;
+  font-weight: 700;
+  gap: 0.4rem;
+}
+textarea {
+  background: #10091d;
+  border: 1px solid #6d4a98;
+  border-radius: 0.65rem;
+  color: #f5f3ff;
+  font: inherit;
+  min-height: 5.3rem;
+  padding: 0.7rem;
+  resize: vertical;
+}
+textarea::placeholder {
+  color: #a78bfa;
+}
+.form-note {
+  font-size: 0.85rem;
+  margin: 0.85rem 0 0;
+}
+.deck ol {
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.deck li {
+  background: #10091d;
+  border-left: 3px solid #8b5cf6;
+  border-radius: 0.35rem 0.7rem 0.7rem 0.35rem;
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.75rem;
+}
+.deck li span {
+  color: #ddd6fe;
+  line-height: 1.4;
+}
+.deck li small {
+  color: #a78bfa;
+}
+.deck .deck__empty {
+  border-left-color: #6b5a7e;
+  color: #c4b5fd;
+}
+.identity {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 1rem 1.15rem;
+}
+.identity p:last-child {
+  color: #ddd6fe;
+  margin-bottom: 0;
+}
+.identity .mesh-name-input {
+  min-width: min(100%, 16rem);
+}
+.privacy-note {
+  color: #c4b5fd;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 1.25rem auto 0;
+  max-width: 52rem;
+  text-align: center;
+}
+@media (max-width: 43rem) {
+  .swarm {
+    padding-top: 4.8rem;
+  }
+  .swarm__grid {
+    grid-template-columns: 1fr;
+  }
+  .review__bar,
+  .identity {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .review__bar button {
+    width: 100%;
+  }
+  .identity .mesh-name-input {
+    min-width: 0;
+  }
+}

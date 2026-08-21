@@ -1,0 +1,8 @@
+pipeline:
+  verify:
+    image: node:22
+    commands:
+      - npm ci
+      - npm run fmt:check
+      - npm run typecheck
+      - npm run smoke
